@@ -13,3 +13,25 @@
   height: 60px;
   background: url(/assets/images/login_title.png) no-repeat center;
 }
+/* 默认去登录盒子隐藏 */
+.reg-box {
+  display: none;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 小图标 */
+.layui-form-item {
+  position: relative;
+}
+.layui-form-item i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.layui-input {
+  padding-left: 32px;
+}
