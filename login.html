@@ -15,12 +15,13 @@
     <!-- 
         jQuery->$->  $.xxoo
         layui->全局变量 -->
+    <script src="/assets/js/utils.js"></script>
     <script src="/assets/js/login.js"></script>
   </head>
   <body>
-    <!-- logo -->
+    <!-- LOGO -->
     <div class="layui-main">
-      <img src="./assets/images/logo.png" alt="图片无法显示" />
+      <img src="/assets/images/logo.png" alt="图片无法显示" />
     </div>
 
     <!-- 表单容器 -->
@@ -28,9 +29,13 @@
       <!-- title -->
       <div class="title-box"></div>
 
-      <!--表单注册 -->
+      <!-- 表单 -->
+
+      <!-- 注册表单 -->
+
       <div class="login-box">
-        <form class="layui-form">
+        <!-- 登录表单 -->
+        <form class="layui-form" id="btn-login">
           <!-- 用户名 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
@@ -60,6 +65,7 @@
               class="layui-input"
             />
           </div>
+
           <!-- 提交按钮
              lay-submit表示该按钮为表单的提交按钮
        按钮+蓝色 ，layui-btn layui-btn-normal
@@ -80,7 +86,7 @@
 
       <div class="reg-box">
         <!-- 注册表单 -->
-        <form class="layui-form">
+        <form class="layui-form" id="btn-reg">
           <!-- 用户名 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
