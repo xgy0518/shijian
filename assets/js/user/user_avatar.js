@@ -28,4 +28,26 @@ $(function () {
       .attr("src", newImgURL) // 重新设置图片路径
       .cropper(options); // 重新初始化裁剪区域
   });
+
+  // 确定上传
+  $("#sure").on("click", function (e) {
+    e.preventDefault();
+
+    // 获取图片：把图片url转换成base64
+    var dataURL = $image
+      .cropper("getCroppedCanvas", {
+        // 创建一个 Canvas 画布
+        width: 100,
+        height: 100,
+      })
+      .toDataURL("image/png");
+
+    // 发送请求
+    $.post("/my/update/avatar", { avatar: dataURL }, function (res) {
+      if (res.status === 0) {
+        // 调用iframe形成的父页面index.html内嵌的index.js中的方法
+        window.parent.getUserInfo();
+      }
+    });
+  });
 });
